@@ -223,7 +223,41 @@ console.log("----- Week7 -12 --------\n" );
 // Question 13
 console.log("----- Week7 -13 --------\n" );
 /* This is a function I created of my own which solves the problem of
-**
+** Arrays (Names, Street Number, Address, Sale Amount) where each index references same person in each (eg. idx 0 in all three is for same person)
+** Use function calcCommission to calculate the commission of 6% for each of the array elements.
+** use template literals
+** console out each index with commission amount
 */
 
-console.log('<----------- End of Week 7 Coding Assignment Answers ------------------->');
+    var commissionAmount = 0;   //variable which will be used to hold the calculated commission amount
+
+    const namesArray13 = ['Bob', 'Jon', 'Deb'];     // Array containing the owners name
+    const streetNumArray13 = ['1234', '5678', '9812'];  //Array containing the owners street number
+    const addressArray13 = ['Happy Dr', 'Friendly St', 'Beauty Ln'];  //Array containing owners street name
+    const salesAmtArray13 = [10000, 20000, 25000];  //Array containing the sales amount for each address
+
+    function calcCommission(SaleAmount) {
+        commissionAmount = 0;                   // resetting commissionAmount to 0 on each entry to the function
+        commissionAmount = SaleAmount * .06;    // calculating 6% commission on parm - SaleAmount
+        return commissionAmount;                // returning the calculated commission
+    }
+
+    console.log('For Question 13, I created a function named - calcCommission - which takes the sales amount from an array' + '\n');
+    console.log('named salesAmtArray. I then use 4 arrays and the return from the function and console.log out all this' + '\n');
+    console.log('information (Name, Street number, address, commission and sales amount using template literals.' + '\n');
+
+    console.log('13 - Answer: ' + '\n');
+
+    // for loop below will go thru each element of all the arrays to calc commission and output information via
+    // template literal format
+
+    for (i = 0; i < namesArray13.length; i++) {
+        calcCommission(salesAmtArray13[i]);
+        console.log(`${namesArray13[i]} who bought a house at
+                            ${streetNumArray13[i]}  ${addressArray13[i]}
+                            commission = ${commissionAmount} from a sale of
+                            ${salesAmtArray13[i]}`);         
+    }
+
+    
+    console.log('\n<----------- End of Week 7 Coding Assignment Answers ------------------->');
