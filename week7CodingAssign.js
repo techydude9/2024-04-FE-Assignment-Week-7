@@ -167,12 +167,63 @@ console.log("----- Week7 - 9 --------\n" );
 
 // Question 10
 console.log("----- Week7 -10 --------\n" );
+  const array10 =[5, 3, 15, 20, 99, 31, 79];  //Test case 1
+//  const array10 =[20, 99, 31, 79];            //Test case 2
+//  const array10 =[5, 3, 15, 20, 99];          //Test case 3
+//  const array10 =[3, 15, 20, 99, 31];         //Test case 4
+
+    const avgArray10 = array10.reduce((accum, current) => accum + current) / array10.length;
+
+    console.log('10 - Answer: Array10 average is ' + avgArray10 + ' using these array values ' + array10 + '\n\n');
 
 // Question 11
 console.log("----- Week7 -11 --------\n" );
+   const array11A= [1, 2, 3, 4, 5, 6];   // Test case 1 Result is True
+   const array11B = [1, 2, 3, 4, 5];   // Test case 1
+//   const array11A= [1, 2, 3, 4, 5];   // Test case 2  Result is false
+//   const array11B = [1, 2, 3, 4, 5];   // Test case 2
+//   const array11A= [1, 2, 3, 4, 5];   // Test case 3 Result is false
+//   const array11B = [1, 2, 3, 4, 5, 6];   // Test case 3
+
+    function avgArrayTest (arrayA, arrayB) {
+        let avgArray11A = arrayA.reduce((accuma, currenta) => accuma + currenta) / arrayA.length;
+        let avgArray11B = arrayB.reduce((accumb, currentb) => accumb + currentb) / arrayB.length;
+
+        if (avgArray11A > avgArray11B) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    console.log('11 - Answer: array 1 is greater than array 2: ' + avgArrayTest(array11A, array11B) + '\n');
+    console.log('Array 1 is ' + array11A +'\n');
+    console.log('Array 2 is ' + array11B + '\n\n');
+
 
 // Question 12
 console.log("----- Week7 -12 --------\n" );
 
+    function willBuyDrink (isHotOutside, moneyInPocket){
+        if (isHotOutside && moneyInPocket > 10.50) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    console.log('12-1 - Answer:' + willBuyDrink(true, 25) + ' when isHotOuside = true and moneyInPocket = 25. Test Case 1 \n\n'); // test case 1
+    console.log('12-2 - Answer:' + willBuyDrink(true, 10) + ' when isHotOuside = true and moneyInPocket = 10. Test Case 2 \n\n'); // test case 2
+    console.log('12-3 - Answer:' + willBuyDrink(false, 25) + ' when isHotOuside = false and moneyInPocket = 25. Test Case 3 \n\n'); // test case 3
+    console.log('12-4 - Answer:' + willBuyDrink(false, 10) + ' when isHotOuside = false and moneyInPocket = 10. Test Case 4 \n\n'); // test case 4
+    console.log('12-5 - Answer:' + willBuyDrink(true, 10.50) + ' when isHotOuside = true and moneyInPocket = 10.50. Test Case 5 \n\n'); // test case 5
+    console.log('12-6 - Answer:' + willBuyDrink(true, 10.51) + ' when isHotOuside = true and moneyInPocket = 10.51. Test Case 6 \n\n'); // test case 6
+
+
 // Question 13
 console.log("----- Week7 -13 --------\n" );
+/* This is a function I created of my own which solves the problem of
+**
+*/
+
+console.log('<----------- End of Week 7 Coding Assignment Answers ------------------->');
